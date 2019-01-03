@@ -35,6 +35,10 @@ const requestHandler = (req, res) =>{
 		}
 		res.writeHead(200, {"Content-Type": "application/json"});
 		res.end(JSON.stringify(timestamp));
+	} else if (req.url.startsWith("www.t1p4-linuxrdp.stratusdigitalsystems.com")){
+		console.log("Stratus working");
+
+	
 	} else {
 		fs.readFile("views/404.html", (err, html) => {
 			if (err) throw err;
